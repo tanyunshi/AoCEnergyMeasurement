@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from collections import Counter
 import re
 compiled_pattern = re.compile(r'^#(\d+) @ (\d+),(\d+): (\d+)x(\d+)\n$')
