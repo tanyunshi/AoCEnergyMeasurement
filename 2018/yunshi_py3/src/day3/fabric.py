@@ -22,12 +22,12 @@ def find_only_claim(claims, fabric_counter):
         maybe_only_claim = True
 
         for i in range(x, x + width):
-            if not maybe_only_claim:
-                continue
             for j in range(y, y + height):
                 if not fabric_counter[(i, j)] == 1:
                     maybe_only_claim = False
                     break
+            if not maybe_only_claim:
+                break
 
             if i == x+width-1 and j == y+height-1:
                 return claim_id
